@@ -1,4 +1,4 @@
-# Laravel 9 Livewire 多租戶團隊
+# Laravel 10 Livewire 多租戶團隊
 
 新增由許多不同團隊獨立使用的專案／任務的地方，團隊只能訪問（新增、查詢、修改、刪除）他們隸屬專案資料，而無法看到其他團隊建立的任何專案資料。
 
@@ -20,9 +20,13 @@ $ php artisan key:generate
 ```sh
 $ php artisan migrate
 ```
-- 執行安裝 Laravel Mix 引用的依賴項目，並執行所有 Mix 任務。
+- 執行安裝 Vite 和 Laravel 擴充套件引用的依賴項目。
 ```sh
-$ npm install && npm run dev
+$ npm install
+```
+- 執行正式環境版本化資源管道並編譯。
+```sh
+$ npm run build
 ```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
 - 你可以經由 `/register` 來進行註冊。
@@ -31,8 +35,8 @@ $ npm install && npm run dev
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/3bXVc76.png)
+![](https://i.imgur.com/z0jPwei.png)
 > 每個團隊都有自己的成員、專案和任務
 
-![](https://i.imgur.com/mDFYhyV.png)
+![](https://i.imgur.com/344NlG1.png)
 > 無法瀏覽不隸屬登入者的其他團隊專案和任務

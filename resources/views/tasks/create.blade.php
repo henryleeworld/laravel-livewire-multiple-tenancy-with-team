@@ -9,21 +9,21 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
-                    <x-jet-validation-errors class="mb-4" :errors="$errors"/>
+                    <x-validation-errors class="mb-4" :errors="$errors"/>
 
                     <form method="POST" action="{{ route('tasks.store') }}">
                         @csrf
 
                         <!-- Name -->
                         <div>
-                            <x-jet-label for="name" :value="__('Name')"/>
+                            <x-label for="name" :value="__('Name')"/>
 
-                            <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')"
+                            <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')"
                                      required autofocus/>
                         </div>
 
                         <div class="mt-4">
-                            <x-jet-label for="project_id" :value="__('Project')"/>
+                            <x-label for="project_id" :value="__('Project')"/>
 
                             <x-select id="project_id" name="project_id" class="block mt-1 w-full">
                                 @foreach ($projects as $project)
@@ -33,9 +33,9 @@
                         </div>
 
                         <div class="flex mt-4">
-                            <x-jet-button>
+                            <x-button>
                                 {{ __('Save Task') }}
-                            </x-jet-button>
+                            </x-button>
                         </div>
                     </form>
                 </div>

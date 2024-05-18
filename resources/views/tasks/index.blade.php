@@ -37,7 +37,7 @@
                                     <form method="POST" action="{{ route('tasks.destroy', $task) }}" class="inline-block">
                                         @csrf
                                         @method('DELETE')
-                                        <x-jet-danger-button type="submit" onclick="return confirm('Are you sure?')">{{ __('Delete') }}</x-jet-danger-button>
+                                        <x-danger-button type="submit" onclick="return confirm('{{ __('Are you sure?') }}')">{{ __('Delete') }}</x-danger-button>
                                     </form>
                                 </td>
                             </tr>
